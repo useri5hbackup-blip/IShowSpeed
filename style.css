@@ -1,0 +1,164 @@
+/* GENERAL */
+body {
+    margin: 0;
+    font-family: 'Arial Black', sans-serif;
+    background: #0d0d0d;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(45deg, #ff0000, #6600ff);
+    animation: glow 4s infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 20px red; }
+    to { box-shadow: 0 0 40px purple; }
+}
+
+header .logo {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* NAVBAR */
+nav {
+    background: #111;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* SECTIONS */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* ANIMATIONS */
+.animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s ease;
+}
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* VIDEO */
+.video-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+iframe {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+}
+
+/* NEWS */
+.news-card {
+    background: #1d1d1d;
+    border-left: 5px solid red;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* MERCH */
+.merch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.merch-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* CONTACT */
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input, form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+}
+
+button {
+    padding: 12px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 700px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        padding: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+}
